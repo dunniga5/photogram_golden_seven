@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
     @photo.caption = params[:the_caption]
     @photo.save
 
-    render("show.html.erb")
+    redirect_to("/photos/#{@photo.id}")
   end
 
   def delete
