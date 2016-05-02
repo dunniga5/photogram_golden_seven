@@ -29,8 +29,10 @@ class PhotosController < ApplicationController
     @photo.source = params[:the_source]
     @photo.caption = params[:the_caption]
     @photo.save
+
+    render("show.html.erb")
   end
-  
+
   def delete
     p = Photo.find_by({ :id => params[:id]})
     p.destroy
