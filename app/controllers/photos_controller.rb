@@ -7,4 +7,16 @@ class PhotosController < ApplicationController
     @photo = Photo.find_by({ :id => params[:id]})
   end
 
+  def new_form
+    #code
+  end
+
+  def create_row
+    p = Photo.new
+    p.caption = params[:the_caption]
+    p.source = params[:the_source]
+    p.save
+
+    redirect_to("/photos")
+  end
 end
