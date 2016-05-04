@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Photogram</title>
+<body>
+
+<h1>Photo Details</h1>
+
+<img src= <%= @photo.source %> width="720">
+
+<p><%= @photo.caption %></p>
+
+<a href="/photos">Back</a>
+<a href="/photos/213/edit">Edit</a>
+<a href="/delete_photo/213">Delete</a>
+
+
+</body>
+</html>
