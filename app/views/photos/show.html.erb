@@ -8,6 +8,4 @@
 
 <a href="/photos">Back</a>
 <a href="/photos/<%= @photo.id %>/edit">Edit</a>
-
-<% @photo.destroy do |photo| %>
-<a href="http://localhost:3000/delete_photo/<%= photo.id %>">Delete</a>
+<a href="http://localhost:3000/delete_photo/<%= @photo.id %>">Delete</a>
