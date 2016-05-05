@@ -3,5 +3,15 @@ class PhotosController < ApplicationController
     @list_of_photos = Photo.all
   end
 
+  def show
+    @photo = Photo.find_by({ :id => params[:id] })
+    #@photo_source = p.source
+    #@photo_caption = p.caption
+    #@photo_id = p.id
+  end
+
+  def new_form
+      
+  end
 
 end
