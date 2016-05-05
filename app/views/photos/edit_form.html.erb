@@ -1,0 +1,13 @@
+<h1>Edit photo</h1>
+<form action="/edit_photo/<%= @edit_id %>">
+<div class="form-group">
+      <label for="the_caption">Caption:</label>
+    <input name="edit_caption" id="the_caption" value="<%= @form_caption %>">
+  </div>
+  <div class="form-group">
+    <label for="URL">Image URL:</label>
+    <input name="edit_url" id="URL" value="<%= @form_source %>">
+  </div>
+    <button>Edit Photo</button>
+
+</form>
