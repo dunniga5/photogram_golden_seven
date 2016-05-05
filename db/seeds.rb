@@ -34,6 +34,14 @@ photo_info = [
   {
     :source => "http://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Biandintz_eta_zaldiak_-_modified2.jpg/1280px-Biandintz_eta_zaldiak_-_modified2.jpg",
     :caption => "Biandintz"
+  },
+  {
+    :source => "http://sites.psu.edu/english15tatianarotger/wp-content/uploads/sites/32153/2015/09/Alley-in-the-old-city-of-San-J-2.jpg",
+    :caption => "Old San Juan"
+  },
+  {
+    :source => "https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=0ahUKEwih94nTgrrMAhWLGB4KHXufDh0QjBwIBA&url=http%3A%2F%2Fimages.kaneva.com%2Ffilestore%2F1589891%2F2275551%2FRome%2520Coliseum%25202.JPG&psig=AFQjCNE8fYa0mjuTOfb9bxErBIYZuBquew&ust=1462231416875016",
+    :caption => "Coliseum"
   }
 ]
 
