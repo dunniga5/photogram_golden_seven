@@ -4,6 +4,13 @@ class PhotosController < ApplicationController
   end
 
 
+def new_form
+  
+
+end
+
+
+
   def show
     @photo = Photo.find_by ({ :id=> params[:id]})
   end
