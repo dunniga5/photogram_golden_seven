@@ -22,6 +22,7 @@ class PhotosController < ApplicationController
 
   def destroy
     @photo_to_delete = Photo.find_by({ :id => params[:id] })
+    @photo_to_delete.destroy
 
     redirect_to("http://localhost:3000/photos")
   end
