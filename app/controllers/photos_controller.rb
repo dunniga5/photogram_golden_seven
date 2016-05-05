@@ -34,4 +34,12 @@ class PhotosController < ApplicationController
     redirect_to("/photos/7")
   end
 
+  def delete
+    i = Photo.find_by({ :id => params[:id] })
+    i.destroy
+
+    redirect_to("/photos")
+
+  end
+
 end
