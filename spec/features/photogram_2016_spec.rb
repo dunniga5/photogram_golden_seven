@@ -1,30 +1,50 @@
 require "rails_helper"
 
-# / && /PHOTOS
-feature "Home page (same as /photos)" do
-  scenario "Home page has an h1 tag with text 'List of Photos' (should always pass since initial repo takes care of this)", points: 1 do
-    visit "/"
-    expect(page).to have_selector("h1", text: "List of Photos")
-  end
-end
+feature "READ: " do
+  scenario "photos#index RCAV works", points: 1 do
+    visit "/photos"
 
-# /PHOTOS/:ID
-feature "Photo details page (/photos/:id)" do
-  photo = FactoryGirl.create(:photo)
-
-  scenario "Photo details page (/photos/:id) exists (RCAV set)", points: 1 do
-    visit "/photos/#{photo.id}"
-    expect(page)
+    expect(page).to have_selector("h1")
   end
 
-  scenario "Photo details page (/photos/:id) displays photo", points: 1 do
-    visit "/photos/#{photo.id}"
+  scenario "photos#index displays a list of existing photos", points: 1 do
+    first_photo = FactoryGirl.create(:photo)
+    second_photo = FactoryGirl.create(:photo)
+
+    visit "/photos"
+
+    expect(page).to have_content(first_photo.caption)
+    expect(page).to have_css("img[src*='#{first_photo.source}']")
+
+    expect(page).to have_content(second_photo.caption)
+    expect(page).to have_css("img[src*='#{second_photo.source}']")
+  end
+
+  scenario "photos#show RCAV works", points: 1 do
+    first_photo = FactoryGirl.create(:photo)
+
+    visit "/photos"
+    click_on "Show"
+
+    expect(page).to have_selector("h1")
+  end
+
+  scenario "photos#show displays photo", points: 1 do
+    first_photo = FactoryGirl.create(:photo)
+
+    visit "/photos"
+    click_on "Show"
+
     expect(page).to have_css("img[src*='#{photo.source}']")
   end
 
-  scenario "Photo details page (/photos/:id) displays caption", points: 1 do
-    visit "/photos/#{photo.id}"
-    expect(page).to have_content("#{photo.caption}")
+  scenario "photos#show displays caption", points: 1 do
+    first_photo = FactoryGirl.create(:photo)
+
+    visit "/photos"
+    click_on "Show"
+
+    expect(page).to have_content(photo.caption)
   end
 end
 
