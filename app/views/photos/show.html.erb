@@ -1,0 +1,52 @@
+<h1>Photo Details</h1>
+
+<!-- This is the DRY version see the def show action -->
+<img src="<%= @photo.source%>" alt="" width="480"/>
+
+<p>
+  <%= @photo.caption %>
+</p>
+
+<a href="http://localhost:3000/">back</a>
+<a href="http://localhost:3000/photos/<%=@photo.id%>/edit">edit</a>
+<a href="http://localhost:3000/delete_photo/<%@photo.id%>">delete</a>
+
+
+<!-- Pre-DRYing see def show action -->
+<!-- <img src="<%= @photo_source%>" alt="" width="480"/>
+<p>
+  <%= @photo_caption %>
+</p>
+
+<a href="http://localhost:3000/">back</a>
+<a href="http://localhost:3000/photos/<%=@photo_id%>/edit">edit</a>
+<a href="http://localhost:3000/delete_photo/<%@photo_id%>">delete</a> -->
+
+
+
+
+
+<!-- At this point the front-end is ready for some back-end development -->
+
+<!-- <img src="<%= @photo_source%>" alt="" width="480"/>
+
+<p>
+  <%= @photo_caption %>
+</p>
+
+<a href="http://localhost:3000/">back</a>
+<a href="http://localhost:3000/photos/<%=@photo_id%>/edit">edit</a>
+<a href="http://localhost:3000/delete_photo/<%=@photo_id%>">delete</a> -->
+
+<!-- conceptualize basic-->
+<!-- <h1>Photo Details</h1>
+
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Lake_Bondhus_Norway_2862.jpg/1280px-Lake_Bondhus_Norway_2862.jpg" alt="" width="480"/>
+
+<p>
+Lake Bondhus
+</p>
+
+<a href="http://localhost:3000/">back</a>
+<a href="http://localhost:3000/photos/X/edit">edit</a>
+<a href="http://localhost:3000/delete_photo/X">delete</a> -->
