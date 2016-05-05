@@ -31,7 +31,7 @@ class PhotosController < ApplicationController
     i.save
 
     # cant get dynamic link to move
-    redirect_to("/photos/7")
+    redirect_to("/photos/#{i.id}")
   end
 
   def delete
